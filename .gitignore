@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+*.zip
+*.crx
+*.pem
+.playwright-cli/
+coverage/
+evidence/*
+!evidence/three-accounts.png

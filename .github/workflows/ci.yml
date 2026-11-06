@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate manifest and icons
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const manifest = JSON.parse(fs.readFileSync("manifest.json", "utf8"));
+            if (manifest.manifest_version !== 3) throw new Error("Expected MV3");
+            for (const p of Object.values(manifest.icons || {})) {
+              if (!fs.existsSync(p)) throw new Error("Missing icon: " + p);
+            }
+          '
+      - name: Run unit tests
+        run: npm test
