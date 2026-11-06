@@ -19,7 +19,7 @@
 
 ### 方式一：下载 Release 压缩包（推荐）
 
-1. 前往 [Releases](https://github.com/zzusec/glados-checkin-extension/releases) 下载最新的 `glados-checkin-extension-v1.1.0.zip`，解压到一个**固定目录**（后续请勿移动或删除该目录）。
+1. 前往 [Releases](https://github.com/zzusec/glados-checkin/releases) 下载最新的 `glados-checkin-v1.1.0.zip`，解压到一个**固定目录**（后续请勿移动或删除该目录）。
 2. Chrome 打开 `chrome://extensions/`，开启右上角「开发者模式」。
 3. 点击「加载已解压的扩展程序」，选择刚才解压出来的文件夹（内含 `manifest.json`）。
 4. 在浏览器工具栏扩展菜单中固定「GLaDOS 多账号签到助手」。
@@ -27,10 +27,10 @@
 ### 方式二：克隆源码
 
 ```bash
-git clone https://github.com/zzusec/glados-checkin-extension.git
+git clone https://github.com/zzusec/glados-checkin.git
 ```
 
-然后在 `chrome://extensions/` 开启「开发者模式」→「加载已解压的扩展程序」，选择克隆下来的 `glados-checkin-extension` 目录。后续拉取更新或修改代码后，在扩展管理页点击「重新加载」即可，无需卸载或重新添加账号。
+然后在 `chrome://extensions/` 开启「开发者模式」→「加载已解压的扩展程序」，选择克隆下来的 `glados-checkin` 目录。后续拉取更新或修改代码后，在扩展管理页点击「重新加载」即可，无需卸载或重新添加账号。
 
 ## 使用说明：添加账号与全部签到
 
@@ -75,7 +75,7 @@ git clone https://github.com/zzusec/glados-checkin-extension.git
 环境要求：Node.js 20+（零第三方运行时依赖）。
 
 ```bash
-cd glados-checkin-extension
+cd glados-checkin
 npm test
 ```
 
